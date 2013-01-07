@@ -9,8 +9,8 @@ i18ndude merge --pot ./manual.pot --merge ./generated.pot
 i18ndude rebuild-pot --pot ./maps.pot --merge ./manual.pot --create maps ../ || exit 1
 i18ndude sync --pot ./maps.pot ./*/LC_MESSAGES/maps.po
 
-i18ndude rebuild-pot --pot ../i18n/Products.Maps-plone.pot --exclude="../content/Location.py" --merge ../i18n/manual-plone.pot --create plone ../profiles/default
-i18ndude sync --pot ../i18n/Products.Maps-plone.pot ../i18n/Products.Maps-plone-*.po
+#i18ndude rebuild-pot --pot ../i18n/Products.Maps-plone.pot --exclude="../content/Location.py" --merge ../i18n/manual-plone.pot --create plone ../profiles/default
+#i18ndude sync --pot ../i18n/Products.Maps-plone.pot ../i18n/Products.Maps-plone-*.po
 
 WARNINGS=`find . -name "*pt" | xargs i18ndude find-untranslated | grep -e '^-WARN' | wc -l`
 ERRORS=`find . -name "*pt" | xargs i18ndude find-untranslated | grep -e '^-ERROR' | wc -l`

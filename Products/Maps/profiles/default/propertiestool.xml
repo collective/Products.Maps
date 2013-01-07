@@ -2,28 +2,9 @@
 <object name="portal_properties" meta_type="Plone Properties Tool">
  <object name="maps_properties" meta_type="Plone Property Sheet">
   <property name="title">Maps Properties</property>
-  <property name="map_markers" type="lines">
-   <element
-      value="Name | Icon | iconSize | iconAnchor | infoWindowAnchor | Shadow | shadowSize | infoShadowAnchor"/>
-   <element
-      value="Red Marker     | marker-red.png       | 20,34 | 9,34 | 9,2 | shadow50.png | 37,34 | 18,25"/>
-   <element
-      value="Green Marker   | marker-green.png     | 20,34 | 9,34 | 9,2 | shadow50.png | 37,34 | 18,25"/>
-   <element
-      value="Blue Marker    | marker-blue.png      | 20,34 | 9,34 | 9,2 | shadow50.png | 37,34 | 18,25"/>
-   <element
-      value="Yellow Marker  | marker-yellow.png    | 20,34 | 9,34 | 9,2 | shadow50.png | 37,34 | 18,25"/>
-   <element
-      value="Magenta Marker | marker-magenta.png   | 20,34 | 9,34 | 9,2 | shadow50.png | 37,34 | 18,25"/>
-   <element
-      value="_yah           | marker-you-are-here.png   | 20,34 | 9,34 | 9,2 | shadow-you-are-here.png | 37,34 | 18,25"/>
-  </property>
-<!--  <property name="map_default_location" type="string">0.0, 0.0</property>-->
-  <property name="map_google_api3_keys" type="string"></property>
-  <property name="map_default_maptype" type="string">roadmap</property>
-  <property name="map_show_contents" type="boolean">True</property>
-  <property name="map_layers_active" type="boolean">True</property>
-  <property name="map_search_active" type="boolean">False</property>
+
+  <!-- properties registration left to setuphandlers.py -->
+
  </object>
 </object>
 

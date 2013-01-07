@@ -1,0 +1,123 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="maps">
+
+  <include package="plone.app.contentmenu" />
+
+  <browser:page
+      for="..interfaces.ILocation"
+      name="maps_map"
+      template="maps_map.pt"
+      permission="zope2.View"
+      />   
+  <browser:page
+      for="..interfaces.ILocation"
+      name="maps_location"
+      template="maps_location.pt"
+      permission="zope2.View"
+      />
+
+  <browser:menuItem
+      for="*"
+      menu="plone_displayviews"
+      title="Map view"
+      i18n:attributes="title"
+      action="@@maps_map"
+   />
+  <browser:menuItem
+      for="*"
+      menu="plone_displayviews"
+      title="Location view"
+      i18n:attributes="title"
+      action="@@maps_location"
+   />
+
+  <browser:page
+      for="Products.ATContentTypes.interface.IATFolder"
+      name="maps_map"
+      template="maps_map.pt"
+      permission="zope2.View"
+      />
+  <browser:page
+      for="Products.ATContentTypes.interface.IATTopic"
+      name="maps_map"
+      template="maps_map.pt"
+      permission="zope2.View"
+      />   
+
+
+  <browser:page
+      for="*"
+      name="maps_configuration"
+      class=".config.MapsConfig"
+      permission="zope2.View"
+      allowed_interface="..interfaces.config.IMapsConfig"
+      />
+
+  <browser:page
+      for="Products.Maps.interfaces.IMapEnabled"
+      name="maps_googlemaps_enabled_view"
+      class=".map.DefaultMapView"
+      permission="zope.Public"
+      allowed_interface="..interfaces.map.IMapEnabledView"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.interface.IATTopic"
+      name="maps_googlemaps_enabled_view"
+      class=".map.FolderMapView"
+      permission="zope.Public"
+      allowed_interface="..interfaces.map.IMapEnabledView"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.interface.IATFolder"
+      name="maps_googlemaps_enabled_view"
+      class=".map.FolderMapView"
+      permission="zope.Public"
+      allowed_interface="..interfaces.map.IMapEnabledView"
+      />
+
+  <browser:page
+      for="Products.Maps.interfaces.ILocation"
+      name="maps_googlemaps_view"
+      class=".map.DefaultMapView"
+      permission="zope2.View"
+      allowed_interface="..interfaces.map.IMapView"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.interface.IATTopic"
+      name="maps_googlemaps_view"
+      class=".map.FolderMapView"
+      permission="zope2.View"
+      allowed_interface="..interfaces.map.IMapView"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.interface.IATFolder"
+      name="maps_googlemaps_view"
+      class=".map.FolderMapView"
+      permission="zope2.View"
+      allowed_interface="..interfaces.map.IMapView"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.interface.IATFolder"
+      name="maps_save_config"
+      class=".map.SaveMapView"
+      permission="cmf.ModifyPortalContent"
+      />
+
+  <browser:page
+      for="Products.ATContentTypes.interface.IATTopic"
+      name="maps_save_config"
+      class=".map.SaveMapView"
+      permission="cmf.ModifyPortalContent"
+      />
+
+
+</configure>

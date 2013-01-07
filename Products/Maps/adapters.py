@@ -6,6 +6,11 @@ from Products.Maps.interfaces import IGeoLocation, IMarker, IRichMarker, IMap
 from Products.CMFPlone.utils import base_hasattr
 from Products.ATContentTypes.interface import IATTopic, IATFolder
 
+try:
+    from plone.app.collection.interfaces import ICollection
+except ImportError:
+    ICollection = None
+
 class BaseMap(object):
     implements(IMap)
 
@@ -29,6 +34,13 @@ class SmartFolderMap(BaseMap):
 
     def _getItems(self):
         return self.context.queryCatalog()
+
+if ICollection:
+    class CollectionMap(BaseMap):
+        adapts(ICollection)
+    
+        def _getItems(self):
+            return self.context.queryCatalog()
 
 
 class FolderMap(BaseMap):

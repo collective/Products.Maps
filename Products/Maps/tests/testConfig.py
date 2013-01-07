@@ -9,7 +9,6 @@ from Products.PloneTestCase.PloneTestCase import default_password
 from Products.Maps.tests import MapsTestCase
 
 from Products.Maps.config import PROPERTY_GOOGLE_KEYS_FIELD
-from Products.Maps.config import PROPERTY_GOOGLE_AJAXSEARCH_KEYS_FIELD
 from Products.CMFCore.utils import getToolByName
 
 class TestBrowserConfig(MapsTestCase.MapsFunctionalTestCase):
@@ -33,8 +32,7 @@ class TestConfig(MapsTestCase.MapsTestCase):
         config = self.folder.restrictedTraverse('@@maps_configuration')
 
     def testGoogleAPIKey(self):
-        for prop, attr in ((PROPERTY_GOOGLE_KEYS_FIELD, 'googlemaps_key'),
-                           (PROPERTY_GOOGLE_AJAXSEARCH_KEYS_FIELD, 'googleajaxsearch_key')):
+        for prop, attr in ((PROPERTY_GOOGLE_KEYS_FIELD, 'googlemaps_key'),):
             config = self.folder.restrictedTraverse('@@maps_configuration')
             propertiestool = getToolByName(self.portal, 'portal_properties')
             mapsprops = getattr(propertiestool.aq_base, 'maps_properties')

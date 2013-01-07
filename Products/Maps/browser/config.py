@@ -8,6 +8,7 @@ from Products.Maps.validator import LocationFieldValidator
 
 from Products.CMFCore.utils import getToolByName
 
+from Products.Maps import MapsMessageFactory as _
 
 def getSizeFromString(s):
     values = s.split(",")
@@ -50,7 +51,7 @@ class MapsConfig(BrowserView):
             if parts[0].strip() == "Name":
                 continue
             data = {
-                'name': parts[0].strip(),
+                'name': _(parts[0].strip()).encode('utf-8'),
                 'icon': "%s/%s" % (portal_url, parts[1].strip()),
                 'iconSize': getSizeFromString(parts[2]),
                 'iconAnchor': getSizeFromString(parts[3]),

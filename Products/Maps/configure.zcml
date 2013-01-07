@@ -6,12 +6,11 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="maps">
 
-  <include package="Products.CMFCore" file="permissions.zcml"
-           xmlns:zcml="http://namespaces.zope.org/zcml"
-           zcml:condition="have plone-41" />
+  <include package="Products.CMFCore" />
 
   <i18n:registerTranslations directory="locales" />
 
+  <include package=".browser" />
   <include file="profiles.zcml" />
 
   <permission
@@ -43,79 +42,7 @@
 
   <adapter factory=".adapters.FolderMap" />
 
-  <include file="collection.zcml" zcml:condition="have plone-42"  />
-
-
-  <browser:page
-      for="*"
-      name="maps_configuration"
-      class=".browser.config.MapsConfig"
-      permission="zope2.View"
-      allowed_interface=".interfaces.config.IMapsConfig"
-      />
-
-  <browser:page
-      for="Products.Maps.interfaces.IMapEnabled"
-      name="maps_googlemaps_enabled_view"
-      class=".browser.map.DefaultMapView"
-      permission="zope.Public"
-      allowed_interface=".interfaces.map.IMapEnabledView"
-      />
-
-  <browser:page
-      for="Products.ATContentTypes.interface.IATTopic"
-      name="maps_googlemaps_enabled_view"
-      class=".browser.map.FolderMapView"
-      permission="zope.Public"
-      allowed_interface=".interfaces.map.IMapEnabledView"
-      />
-
-  <browser:page
-      for="Products.ATContentTypes.interface.IATFolder"
-      name="maps_googlemaps_enabled_view"
-      class=".browser.map.FolderMapView"
-      permission="zope.Public"
-      allowed_interface=".interfaces.map.IMapEnabledView"
-      />
-
-  <browser:page
-      for="Products.Maps.interfaces.ILocation"
-      name="maps_googlemaps_view"
-      class=".browser.map.DefaultMapView"
-      permission="zope2.View"
-      allowed_interface=".interfaces.map.IMapView"
-      />
-
-  <browser:page
-      for="Products.ATContentTypes.interface.IATTopic"
-      name="maps_googlemaps_view"
-      class=".browser.map.FolderMapView"
-      permission="zope2.View"
-      allowed_interface=".interfaces.map.IMapView"
-      />
-
-  <browser:page
-      for="Products.ATContentTypes.interface.IATFolder"
-      name="maps_googlemaps_view"
-      class=".browser.map.FolderMapView"
-      permission="zope2.View"
-      allowed_interface=".interfaces.map.IMapView"
-      />
-
-  <browser:page
-      for="Products.ATContentTypes.interface.IATFolder"
-      name="maps_save_config"
-      class=".browser.map.SaveMapView"
-      permission="cmf.ModifyPortalContent"
-      />
-
-  <browser:page
-      for="Products.ATContentTypes.interface.IATTopic"
-      name="maps_save_config"
-      class=".browser.map.SaveMapView"
-      permission="cmf.ModifyPortalContent"
-      />
-
+  <include file="collection.zcml" zcml:condition="installed plone.app.collection"  />
 
   <!-- configlet -->
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Maps\n"
-"POT-Creation-Date: 2013-01-04 09:15+0000\n"
+"POT-Creation-Date: 2013-01-06 16:38+0000\n"
 "PO-Revision-Date: 2010-07-11 00:37-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
@@ -27,13 +27,48 @@ msgstr "Validación fallo. La latitud no esta en los límites [-90, 90]. "
 msgid " Validation failed. Longitude not in bounds [-180, 180]. "
 msgstr "Validación fallo. La longitud no esta en los límites [-180, 180]. "
 
-#: ../content/Location.py:152
+msgid "A content for displaying Google maps in your site"
+msgstr ""
+
+#: ../profiles/default/types/GeoLocation.xml
+msgid "A geographic position that can be shown on a Google map"
+msgstr ""
+
+msgid "Blue Marker"
+msgstr ""
+
+msgid "Green Marker"
+msgstr ""
+
+#: ../content/Location.py:151
 msgid "Info"
 msgstr "Información"
+
+#: ../profiles/default/types/GeoLocation.xml
+msgid "Location"
+msgstr "Ubicación"
+
+msgid "Location view"
+msgstr "Vista de ubicación"
+
+msgid "Magenta Marker"
+msgstr ""
+
+msgid "Map view"
+msgstr "Vista de Mapa"
 
 #: ../browser/controlpanel.py:194
 msgid "Maps settings"
 msgstr "Configuración de Mapas"
+
+msgid "Red Marker"
+msgstr ""
+
+msgid "Yellow Marker"
+msgstr ""
+
+msgid "_yah"
+msgstr ""
 
 #. Default: "Cancel"
 #: ./skins/Maps/maps-config.js.pt:15

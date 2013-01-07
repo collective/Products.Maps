@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Maps\n"
-"POT-Creation-Date: 2013-01-04 09:15+0000\n"
+"POT-Creation-Date: 2013-01-06 16:38+0000\n"
 "PO-Revision-Date: 2007-09-30 17:21+0000\n"
 "Last-Translator: Jay Hotta <naotaka@we.care.jp>\n"
 "Language-Team: \n"
@@ -26,13 +26,48 @@ msgstr ""
 msgid " Validation failed. Longitude not in bounds [-180, 180]. "
 msgstr ""
 
-#: ../content/Location.py:152
+msgid "A content for displaying Google maps in your site"
+msgstr ""
+
+#: ../profiles/default/types/GeoLocation.xml
+msgid "A geographic position that can be shown on a Google map"
+msgstr ""
+
+msgid "Blue Marker"
+msgstr ""
+
+msgid "Green Marker"
+msgstr ""
+
+#: ../content/Location.py:151
 msgid "Info"
+msgstr ""
+
+#: ../profiles/default/types/GeoLocation.xml
+msgid "Location"
+msgstr ""
+
+msgid "Location view"
+msgstr ""
+
+msgid "Magenta Marker"
+msgstr ""
+
+msgid "Map view"
 msgstr ""
 
 #: ../browser/controlpanel.py:194
 msgid "Maps settings"
 msgstr "Maps設定"
+
+msgid "Red Marker"
+msgstr ""
+
+msgid "Yellow Marker"
+msgstr ""
+
+msgid "_yah"
+msgstr ""
 
 #. Default: "Cancel"
 #: ./skins/Maps/maps-config.js.pt:15

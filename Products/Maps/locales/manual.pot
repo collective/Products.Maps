@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Maps\n"
-"POT-Creation-Date: 2013-01-04 09:15+0000\n"
+"POT-Creation-Date: 2013-01-06 16:38+0000\n"
 "PO-Revision-Date: 2007-01-23 18:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -14,6 +14,33 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: maps\n"
+
+msgid "A content for displaying Google maps in your site"
+msgstr ""
+
+msgid "Blue Marker"
+msgstr ""
+
+msgid "Green Marker"
+msgstr ""
+
+msgid "Location view"
+msgstr ""
+
+msgid "Magenta Marker"
+msgstr ""
+
+msgid "Map view"
+msgstr ""
+
+msgid "Red Marker"
+msgstr ""
+
+msgid "Yellow Marker"
+msgstr ""
+
+msgid "_yah"
+msgstr ""
 
 #. Default: "Cancel"
 #: ./skins/Maps/maps-config.js.pt:15

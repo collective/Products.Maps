@@ -3,7 +3,7 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       lang="en"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="maps">
 
 <head></head>
 
@@ -78,22 +78,10 @@
                   tal:content="layer"><tal:comment replace="nothing">Layer</tal:comment></li>
             </ul>
           </div>
-          <tal:block tal:condition="marker/related_items | nothing">
-            <h5 i18n:translate="label_related_items">Related Items</h5>
-            <ul>
-              <li tal:repeat="related marker/related_items">
-                <a href=""
-                   tal:attributes="href related/url;
-                                   title related/description | nothing"
-                   tal:content="related/title" />
-              </li>
-            </ul>
-          </tal:block>
         </li>
         </ul>
 
       </div>
-
 
       <div tal:replace="structure provider:plone.belowcontentbody" />
 

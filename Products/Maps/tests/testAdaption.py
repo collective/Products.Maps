@@ -17,6 +17,7 @@ class TestAdaption(MapsTestCase.MapsTestCase):
     def afterSetUp(self):
         # add permission to add topics
         perms = self.getPermissionsOfRole('Member')
+        self.portal.portal_types['Topic'].global_allow = True
         self.setPermissions(perms + [AddPortalTopics], 'Member')
 
     def getPermissionsOfRole(self, role):
