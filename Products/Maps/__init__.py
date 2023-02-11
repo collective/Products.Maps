@@ -5,6 +5,7 @@ from zope.i18nmessageid import MessageFactory
 try:
     from Products.Archetypes.public import listTypes
     from Products.Archetypes.public import process_types
+    from Products.ATContentTypes import atct
     HAVE_ARCHETYPES = True
 except ImportError:
     HAVE_ARCHETYPES = False
