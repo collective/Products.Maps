@@ -4,6 +4,10 @@ Changelog
 4.0 (unreleased)
 ----------------
 
+- Increase icon to 24px width for WCAG.
+  https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html#dfn-css-pixel
+  [frapell]
+
 - Merge the collective.maplocbehavior product here
   [frapell]
 
