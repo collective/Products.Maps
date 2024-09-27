@@ -31,14 +31,14 @@ class BaseMap(object):
 class CollectionMap(BaseMap):
 
     def _getItems(self):
-        return self.context.queryCatalog()
+        return self.context.queryCatalog(b_size=0)
 
 
 @adapter(IFolder)
 class FolderMap(BaseMap):
 
     def _getItems(self):
-        return self.context.getFolderContents()
+        return self.context.getFolderContents(b_size=0)
 
 
 @implementer(IGeoLocation)

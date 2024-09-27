@@ -20,6 +20,7 @@ Changelog
 3.4 (unreleased)
 ----------------
 
+- Where the catalog is queried, we were inheriting implicit batch size limitations that are not useful in this context. Fixed. [smcmahon]
 - Added back default location [sithmel]
 - Removed some inline styling for better customization [sithmel]
 - when you changed layers the search was not updated (fixed) [sithmel]
@@ -40,7 +41,7 @@ Changelog
 
 - Store map objects in window.activeMaps to allow end-develops access
   [StevenLooman]
-- added title in popup window [giacomos]  
+- added title in popup window [giacomos]
 
 
 3.2 (2013-03-14)
