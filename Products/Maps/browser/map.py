@@ -1,4 +1,7 @@
-from cgi import escape
+try:
+    from cgi import escape
+except ImportError:
+    from html import escape
 
 from zope.interface import implementer
 from zope.component import adapter, getMultiAdapter
